@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>Array Cardio 💪</title>
+</head>
+<body>
+<p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
+
+<script>
+    const HIZIP = [
+        { "city" : "AIEA", "loc" : [ -157.933237, 21.390795 ], "pop" : 43273, "state" : "HI", "_id" : "96701" },
+        { "city" : "CAPTAIN COOK", "loc" : [ -155.887463, 19.438604 ], "pop" : 5338, "state" : "HI", "_id" : "96704" },
+        { "city" : "ELEELE", "loc" : [ -159.538115, 21.923017 ], "pop" : 6466, "state" : "HI", "_id" : "96705" },
+        { "city" : "EWA BEACH", "loc" : [ -158.010307, 21.327418 ], "pop" : 26089, "state" : "HI", "_id" : "96706" },
+        { "city" : "KAPOLEI", "loc" : [ -158.087007, 21.345284 ], "pop" : 15891, "state" : "HI", "_id" : "96707" },
+        { "city" : "HAIKU", "loc" : [ -156.299983, 20.907097 ], "pop" : 5695, "state" : "HI", "_id" : "96708" },
+        { "city" : "HAKALAU", "loc" : [ -155.133335, 19.888217 ], "pop" : 198, "state" : "HI", "_id" : "96710" },
+        { "city" : "HALEIWA", "loc" : [ -158.069315, 21.631151 ], "pop" : 7870, "state" : "HI", "_id" : "96712" },
+        { "city" : "HANA", "loc" : [ -156.039659, 20.761635 ], "pop" : 1895, "state" : "HI", "_id" : "96713" },
+        { "city" : "HANAPEPE", "loc" : [ -159.592022, 21.915644 ], "pop" : 1523, "state" : "HI", "_id" : "96716" },
+        { "city" : "HAUULA", "loc" : [ -157.915704, 21.61395 ], "pop" : 3477, "state" : "HI", "_id" : "96717" },
+        { "city" : "HAWAII NATIONAL", "loc" : [ -155.284015, 19.431103 ], "pop" : 91, "state" : "HI", "_id" : "96718" },
+        { "city" : "HAWI", "loc" : [ -155.838007, 20.238021 ], "pop" : 1741, "state" : "HI", "_id" : "96719" },
+        { "city" : "HILO", "loc" : [ -155.093921, 19.702522 ], "pop" : 40158, "state" : "HI", "_id" : "96720" },
+        { "city" : "PRINCEVILLE", "loc" : [ -159.462587, 22.215948 ], "pop" : 4631, "state" : "HI", "_id" : "96722" },
+        { "city" : "HOLUALOA", "loc" : [ -155.917639, 19.610316 ], "pop" : 2096, "state" : "HI", "_id" : "96725" },
+        { "city" : "HONAUNAU", "loc" : [ -155.893356, 19.44845 ], "pop" : 1583, "state" : "HI", "_id" : "96726" },
+        { "city" : "HONOKAA", "loc" : [ -155.488026, 20.08266 ], "pop" : 3681, "state" : "HI", "_id" : "96727" },
+        { "city" : "HONOMU", "loc" : [ -155.11766, 19.872767 ], "pop" : 548, "state" : "HI", "_id" : "96728" },
+        { "city" : "HOOLEHUA", "loc" : [ -157.079138, 21.173025 ], "pop" : 853, "state" : "HI", "_id" : "96729" },
+        { "city" : "KAAAWA", "loc" : [ -157.873734, 21.56737 ], "pop" : 2305, "state" : "HI", "_id" : "96730" },
+        { "city" : "KAHULUI", "loc" : [ -156.478327, 20.881388 ], "pop" : 17289, "state" : "HI", "_id" : "96732" },
+        { "city" : "KAILUA", "loc" : [ -157.744781, 21.406262 ], "pop" : 53403, "state" : "HI", "_id" : "96734" },
+        { "city" : "KAILUA KONA", "loc" : [ -155.979809, 19.653053 ], "pop" : 19616, "state" : "HI", "_id" : "96740" },
+        { "city" : "KALAUPAPA", "loc" : [ -156.983453, 21.19289 ], "pop" : 130, "state" : "HI", "_id" : "96742" },
+        { "city" : "KAMUELA", "loc" : [ -155.705189, 20.008128 ], "pop" : 9140, "state" : "HI", "_id" : "96743" },
+        { "city" : "KANEOHE", "loc" : [ -157.811543, 21.422819 ], "pop" : 55236, "state" : "HI", "_id" : "96744" },
+        { "city" : "KAPAA", "loc" : [ -159.344842, 22.086798 ], "pop" : 15627, "state" : "HI", "_id" : "96746" },
+        { "city" : "KAUMAKANI", "loc" : [ -159.62413, 21.921329 ], "pop" : 819, "state" : "HI", "_id" : "96747" },
+        { "city" : "KAUNAKAKAI", "loc" : [ -156.969015, 21.090504 ], "pop" : 4419, "state" : "HI", "_id" : "96748" },
+        { "city" : "KEAAU", "loc" : [ -154.992644, 19.589277 ], "pop" : 4297, "state" : "HI", "_id" : "96749" },
+        { "city" : "KEALAKEKUA", "loc" : [ -155.930025, 19.526149 ], "pop" : 1309, "state" : "HI", "_id" : "96750" },
+        { "city" : "KEKAHA", "loc" : [ -159.71988, 21.973509 ], "pop" : 3785, "state" : "HI", "_id" : "96752" },
+        { "city" : "KIHEI", "loc" : [ -156.447543, 20.744124 ], "pop" : 14759, "state" : "HI", "_id" : "96753" },
+        { "city" : "KAPAAU", "loc" : [ -155.798981, 20.218323 ], "pop" : 2550, "state" : "HI", "_id" : "96755" },
+        { "city" : "KOLOA", "loc" : [ -159.474927, 21.908293 ], "pop" : 4906, "state" : "HI", "_id" : "96756" },
+        { "city" : "KUALAPUU", "loc" : [ -157.027669, 21.160097 ], "pop" : 818, "state" : "HI", "_id" : "96757" },
+        { "city" : "KURTISTOWN", "loc" : [ -155.020659, 19.570637 ], "pop" : 3975, "state" : "HI", "_id" : "96760" },
+        { "city" : "LAHAINA", "loc" : [ -156.677162, 20.917432 ], "pop" : 14508, "state" : "HI", "_id" : "96761" },
+        { "city" : "LAIE", "loc" : [ -157.939377, 21.659513 ], "pop" : 8481, "state" : "HI", "_id" : "96762" },
+        { "city" : "LANAI CITY", "loc" : [ -156.921027, 20.829323 ], "pop" : 2426, "state" : "HI", "_id" : "96763" },
+        { "city" : "LAUPAHOEHOE", "loc" : [ -155.232263, 19.980194 ], "pop" : 1015, "state" : "HI", "_id" : "96764" },
+        { "city" : "LIHUE", "loc" : [ -159.368258, 21.981618 ], "pop" : 10663, "state" : "HI", "_id" : "96766" },
+        { "city" : "MAKAWAO", "loc" : [ -156.332735, 20.846932 ], "pop" : 13389, "state" : "HI", "_id" : "96768" },
+        { "city" : "MAKAWELI", "loc" : [ -159.790721, 21.927639 ], "pop" : 797, "state" : "HI", "_id" : "96769" },
+        { "city" : "MAUNALOA", "loc" : [ -157.219277, 21.142202 ], "pop" : 497, "state" : "HI", "_id" : "96770" },
+        { "city" : "MOUNTAIN VIEW", "loc" : [ -155.086436, 19.550587 ], "pop" : 3170, "state" : "HI", "_id" : "96771" },
+        { "city" : "NAALEHU", "loc" : [ -155.657474, 19.066844 ], "pop" : 2729, "state" : "HI", "_id" : "96772" },
+        { "city" : "NINOLE", "loc" : [ -155.159923, 19.904436 ], "pop" : 0, "state" : "HI", "_id" : "96773" },
+        { "city" : "OOKALA", "loc" : [ -155.274666, 20.011887 ], "pop" : 315, "state" : "HI", "_id" : "96774" },
+        { "city" : "PAAUHAU", "loc" : [ -155.449088, 20.027748 ], "pop" : 917, "state" : "HI", "_id" : "96775" },
+        { "city" : "PAAUILO", "loc" : [ -155.369728, 20.027119 ], "pop" : 947, "state" : "HI", "_id" : "96776" },
+        { "city" : "PAHALA", "loc" : [ -155.481506, 19.207898 ], "pop" : 1616, "state" : "HI", "_id" : "96777" },
+        { "city" : "PAHOA", "loc" : [ -154.923135, 19.508901 ], "pop" : 6702, "state" : "HI", "_id" : "96778" },
+        { "city" : "PAIA", "loc" : [ -156.38017, 20.91539 ], "pop" : 2311, "state" : "HI", "_id" : "96779" },
+        { "city" : "PAPAALOA", "loc" : [ -155.218402, 19.904835 ], "pop" : 208, "state" : "HI", "_id" : "96780" },
+        { "city" : "PAPAIKOU", "loc" : [ -155.098442, 19.791643 ], "pop" : 1700, "state" : "HI", "_id" : "96781" },
+        { "city" : "PEARL CITY", "loc" : [ -157.965164, 21.408393 ], "pop" : 38207, "state" : "HI", "_id" : "96782" },
+        { "city" : "PEPEEKEO", "loc" : [ -155.112994, 19.835283 ], "pop" : 2038, "state" : "HI", "_id" : "96783" },
+        { "city" : "VOLCANO", "loc" : [ -155.19743, 19.480066 ], "pop" : 2639, "state" : "HI", "_id" : "96785" },
+        { "city" : "WAHIAWA", "loc" : [ -158.043527, 21.500596 ], "pop" : 43663, "state" : "HI", "_id" : "96786" },
+        { "city" : "MILILANI", "loc" : [ -158.017379, 21.45311 ], "pop" : 34734, "state" : "HI", "_id" : "96789" },
+        { "city" : "KULA", "loc" : [ -156.326026, 20.753353 ], "pop" : 5697, "state" : "HI", "_id" : "96790" },
+        { "city" : "WAIALUA", "loc" : [ -158.126673, 21.576623 ], "pop" : 7975, "state" : "HI", "_id" : "96791" },
+        { "city" : "WAIANAE", "loc" : [ -158.178071, 21.435192 ], "pop" : 37518, "state" : "HI", "_id" : "96792" },
+        { "city" : "WAILUKU", "loc" : [ -156.503612, 20.896586 ], "pop" : 15818, "state" : "HI", "_id" : "96793" },
+        { "city" : "WAIMANALO", "loc" : [ -157.713094, 21.341786 ], "pop" : 9055, "state" : "HI", "_id" : "96795" },
+        { "city" : "WAIMEA", "loc" : [ -159.669429, 21.968487 ], "pop" : 1960, "state" : "HI", "_id" : "96796" },
+        { "city" : "WAIPAHU", "loc" : [ -158.012418, 21.398203 ], "pop" : 52411, "state" : "HI", "_id" : "96797" },
+        { "city" : "HONOLULU", "loc" : [ -157.852072, 21.317905 ], "pop" : 23082, "state" : "HI", "_id" : "96813" },
+        { "city" : "HONOLULU", "loc" : [ -157.843876, 21.299846 ], "pop" : 14182, "state" : "HI", "_id" : "96814" },
+        { "city" : "HONOLULU", "loc" : [ -157.826616, 21.281084 ], "pop" : 28650, "state" : "HI", "_id" : "96815" },
+        { "city" : "HONOLULU", "loc" : [ -157.800626, 21.288677 ], "pop" : 49208, "state" : "HI", "_id" : "96816" },
+        { "city" : "HONOLULU", "loc" : [ -157.861469, 21.329452 ], "pop" : 48920, "state" : "HI", "_id" : "96817" },
+        { "city" : "HONOLULU", "loc" : [ -157.926925, 21.353173 ], "pop" : 62915, "state" : "HI", "_id" : "96818" },
+        { "city" : "HONOLULU", "loc" : [ -157.875947, 21.34877 ], "pop" : 50584, "state" : "HI", "_id" : "96819" },
+        { "city" : "HONOLULU", "loc" : [ -157.755242, 21.292811 ], "pop" : 18366, "state" : "HI", "_id" : "96821" },
+        { "city" : "HONOLULU", "loc" : [ -157.829819, 21.311704 ], "pop" : 39632, "state" : "HI", "_id" : "96822" },
+        { "city" : "HONOLULU", "loc" : [ -157.698523, 21.298684 ], "pop" : 27432, "state" : "HI", "_id" : "96825" },
+        { "city" : "HONOLULU", "loc" : [ -157.828388, 21.294139 ], "pop" : 33672, "state" : "HI", "_id" : "96826" },
+
+
+    ];
+
+
+    const kTowns = HIZIP.filter(zip => (zip.city.includes('K') ));
+    console.log(kTowns);
+
+    // sort towns by population
+    const mostPopulated = HIZIP.sort((a, b) => {
+        const lastTown = a.pop;
+        const nextTown = b.pop;
+        return lastTown > nextTown ? -1 : 1;
+    });
+    console.table(mostPopulated);
+
+    // sort by city name
+    const alpha = HIZIP.sort((xLast, xNext) => {
+       const aCity = xLast.city;
+       const bCity = xNext.city;
+       return aCity > bCity ? 1 : -1;
+    });
+    console.table(alpha);
+
+    //return only city names beginning with a 'W'
+//    console.log('--Showing only cities that begin with a W:');
+//    const wCities = HIZIP.filter(city => (city.city.indexOf(0) == 'W'));
+//    console.log(wCities);
+
+
+</script>
+</body>
+</html>
