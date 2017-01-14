@@ -18,28 +18,74 @@
     }
 
     // Regular
+    console.log('hi!');
 
     // Interpolated
+    console.log('Hello I am a %s String!', 'poop');
+      //es6 template strings are better
+      console.log(`Hello I am a ${makeGreen}`)
 
     // Styled
+    console.log('%c Iam some great text', 'font-size:50px; background:#bada55; text-shadow: 2px 2px 0 blue');
 
     // warning!
+    console.warn('Oh Noooooo!!');
 
-    // Error :|
+    // Error
+    console.error('Shit!');
 
     // Info
+    console.info('Crocodiles eat 3-4 people per year');
 
     // Testing
+    const x = document.querySelector('p');
+    console.assert(x.classList.contains('booger'), `${x} is not correct!`);
 
     // clearing
+    console.clear();
 
     // Viewing DOM Elements
+    console.log(x);
+    console.dir(x);
 
     // Grouping together
+    console.clear();
+    dogs.forEach(dog => {
+        console.group(dog.name); //groupCollapse to view collapsed
+        console.log(`${dog.name} is ${dog.age} years old`)
+        console.log(`${dog.name} is ${dog.age * 7} years old`)
+        console.log(`${dog.name} is ${dog.age * 8} years old`)
+        console.log(`${dog.name} is ${dog.age * 10} years old`)
+        console.groupEnd(dog.name);
+    });
+
 
     // counting
+    //console.group('boo');
+    console.count('Dave');
+    console.count('Rob');
+    console.count('Rob');
+    console.count('Dave');
+    console.count('Dave');
+    console.count('Rob');
+    console.count('Dave');
+    console.count('Rob');
+    console.count('Dave');
+    //console.groupEnd('boo');
+
 
     // timing
+    console.time('fetching data...');
+    fetch('https://api.github.com/users/dmurraykauai')
+        .then(data => data.json())
+        .then(data => {
+            console.timeEnd('fetching data');
+            console.log(data);
+        })
+
+
+    // table
+    console.table(dogs);
 
   </script>
 </body>
