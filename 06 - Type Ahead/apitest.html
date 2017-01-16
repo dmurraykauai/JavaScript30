@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API test</title>
+</head>
+<body>
+
+<form class="search-form">
+    <input type="text" class="search" placeholder="City or State">
+    <ul class="suggestions">
+        <li>Filter for a city</li>
+        <li>or a state</li>
+    </ul>
+</form>
+<script>
+    const endpoint = 'https://wakatime.com/api/v1/users/current?api_key=727f398f-f9cd-4e82-96f6-194e9ce8550e';
+
+    const userData = [];
+
+    fetch(endpoint)
+        .then(blob => blob.json())
+        .then(data => userData.push(...data));
+
+    console.log(userData);
+
+
+</script>
+</body>
+</html>
+
+</body>
+</html>
