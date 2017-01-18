@@ -18,11 +18,13 @@
       // start from ending of secretCode and work towards beginning.
       pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
       //check for secretCode after splice function..
+      console.log(pressed.join());
+
       if(pressed.join('').includes(secretCode)) {
           console.log(`ding ding! .. secret code is: ${secretCode}`);
           cornify_add();
       }
-      console.log(pressed);
+      //console.log(pressed);
   })
 
 </script>
