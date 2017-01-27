@@ -190,6 +190,7 @@
       .map(node => node.dataset.time)
       .map(timeCode => {
           //destructure
+
           const [mins, secs] = timeCode.split(':').map(parseFloat);
           return (mins * 60) + secs;
           //onsole.log(mins, secs);
