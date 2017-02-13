@@ -5,7 +5,7 @@
   <title>Follow Along Nav</title>
 </head>
 <body>
-  <h2>Cool</h2>
+  <h2>Boogabear!</h2>
   <nav class="top">
     <div class="dropdownBackground">
       <span class="arrow"></span>
@@ -16,51 +16,51 @@
         <a href="#">About Me</a>
         <div class="dropdown dropdown1">
           <div class="bio">
-            <img src="https://logo.clearbit.com/wesbos.com">
-            <p>Wes Bos sure does love web development. He teaches things like JavaScript, CSS and BBQ. Wait. BBQ isn't part of web development. It should be though!</p>
+            <img src="IMG_20170211_154658.png">
+            <p>I run a therapy clinic and love skydiving and skiing... plus being my husband's WOMAN in the kitchen making biscuits and things.</p>
           </div>
         </div>
       </li>
       <li>
-        <a href="#">Courses</a>
+        <a href="#">Therapy Services</a>
         <ul class="dropdown courses">
           <li>
-            <span class="code">RFB</span>
-            <a href="https://ReactForBeginners.com">React For Beginners</a>
+            <span class="code">Occupational Therapy</span>
+
           </li>
           <li>
-            <span class="code">ES6</span>
-            <a href="https://ES6.io">ES6 For Everyone</a>
+            <span class="code">Physical Therapy</span>
+
           </li>
           <li>
-            <span class="code">STPU</span>
-            <a href="https://SublimeTextBook.com">Sublime Text Power User</a>
+            <span class="code">Hand Therapy</span>
+
           </li>
           <li>
-            <span class="code">WTF</span>
-            <a href="http://flexbox.io">What The Flexbox?!</a>
+            <span class="code">Speech Therapy</span>
+
           </li>
           <li>
-            <span class="code">LRX</span>
-            <a href="http://LearnRedux.com">Learn Redux</a>
+            <span class="code">Cold Laser</span>
+
           </li>
           <li>
-            <span class="code">CLPU</span>
-            <a href="http://CommandLinePowerUser.com">Command Line Power User</a>
+            <span class="code">Biscuit and gravy maker</span>
+
           </li>
           <li>
-            <span class="code">MMD</span>
-            <a href="http://MasteringMarkdown.com">Mastering Markdown</a>
+            <span class="code">Fat head and head of fatness</span>
+
           </li>
         </ul>
       </li>
       <li>
         <a href="#">Other Links</a>
         <ul class="dropdown dropdown3">
-          <li><a class="button" href="http://twitter.com/wesbos">Twiter</a></li>
-          <li><a class="button" href="http://facebook.com/wesbos.developer">Facebook</a></li>
-          <li><a class="button" href="http://wesbos.com">Blog</a></li>
-          <li><a class="button" href="http://wesbos.com/courses">Course Catalog</a></li>
+          <li><a class="button" href="http://twitter.com/kit-therapy">Twiter</a></li>
+          <li><a class="button" href="http://facebook.com/kit-therapy">Facebook</a></li>
+          <li><a class="button" href="http://kit-therapy.com">Blog</a></li>
+          <li><a class="button" href="http://kit-therapy.com">Services</a></li>
         </ul>
       </li>
     </ul>
@@ -208,7 +208,74 @@
 </style>
 
 <script>
+
+    const triggers = document.querySelectorAll('.cool > li');
+    const background = document.querySelector('.dropdownBackground');
+    const nav = document.querySelector('.top');
+
+    function handleEnter() {
+        console.log('enter!');
+        this.classList.add('trigger-enter');
+        setTimeout(() => {
+            if(this.classList.contains('trigger-enter')) {
+                this.classList.add('trigger-enter-active');
+            }
+        }, 150);
+        background.classList.add('open');
+
+        const dropdown = this.querySelector('.dropdown');
+        //console.log(dropdown);
+
+        const dropdownCoords = dropdown.getBoundingClientRect();
+        const navCoords = nav.getBoundingClientRect();
+        //console.log(navCoords);
+
+        const coords = {
+            height: dropdownCoords.height,
+            width: dropdownCoords.width,
+            top: dropdownCoords.top - navCoords.top,
+            left: dropdownCoords.left - navCoords.left
+        };
+
+        background.style.setProperty('width', `${coords.width}px`);
+        background.style.setProperty('height', `${coords.height}px`);
+        background.style.setProperty('transform', `translate(${coords.left}px, ${coords.top}px`);
+
+    }
+
+    function handleLeave() {
+        console.log('leave!');
+        this.classList.remove('trigger-enter', 'trigger-enter-active');
+        background.classList.remove('open');
+    }
+
+    triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter));
+    triggers.forEach(trigger => trigger.addEventListener('mouseleave', handleLeave));
+
+
+
+
+
 </script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
