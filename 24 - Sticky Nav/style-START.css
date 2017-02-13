@@ -23,10 +23,24 @@ body {
   transition: transform 0.5s;
 }
 
+.boogabear {
+  width: 100%;
+  border: 5px;
+}
+
+.boogabear-pic {
+  align-items: right;
+  border: 20px;
+}
+
+.fixed-test-pic {
+  position: fixed;
+}
+
 header {
   text-align: center;
-  height:50vh;
-  background:url(http://wes.io/iEgP/wow-so-deep.jpg) bottom center no-repeat;
+  height:90vh;
+  background: url("./SchweitzerBowl_2016-17_web.png") bottom center no-repeat;
   background-size:cover;
   display:flex;
   align-items:center;
@@ -48,6 +62,11 @@ nav {
   z-index: 1;
 }
 
+.fixed-nav nav {
+  position: fixed;
+  box-shadow: 0 5px rgba(0,0,0,0.1);
+}
+
 nav ul {
   margin: 0;
   padding:0;
@@ -67,9 +86,13 @@ li.logo {
   max-width:0;
   overflow: hidden;
   background: white;
-  transition: all .5s;
+  transition: all 3s;
   font-weight: 600;
   font-size: 30px;
+}
+
+.fixed-nav li.logo {
+  max-width: 500px;
 }
 
 li.logo a {
